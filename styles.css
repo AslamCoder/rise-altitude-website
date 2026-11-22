@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Rise Altitude Enterprises - Solar & Solar Electricals, Kerala
+   Design System - 100% Aligned to Official Logo Theme (#18407D)
+   Serving All 14 Districts Across Kerala | HQ: Aluva, Ernakulam
+   ========================================================================== */
+
+:root {
+  /* Official Logo Blue Theme Palette */
+  --color-logo-blue-deep: #07172e;      /* Deep midnight blue foundation */
+  --color-logo-blue-dark: #0c2346;      /* Rich dark royal blue */
+  --color-logo-blue: #18407d;           /* Exact primary color from logo */
+  --color-logo-blue-medium: #1f4f99;    /* Elevated interactive blue */
+  --color-logo-blue-light: #2b65be;     /* Vibrant action blue */
+  --color-logo-blue-bright: #3b82f6;    /* Bright accent blue */
+  --color-logo-blue-sky: #0284c7;       /* Solar daylight / electric accent */
+  --color-logo-blue-ice: #f0f5fc;       /* Clean light background */
+  --color-logo-blue-tint: #e1ecfa;      /* Subtle border & chip background */
+  --color-logo-blue-border: #bfd6f6;    /* Distinct structural border */
+
+  /* Neutral Surfaces */
+  --color-white: #ffffff;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-700: #334155;
+  --color-slate-900: #0f172a;
+
+  /* Trust Status */
+  --color-eco-green: #10b981;
+  --color-eco-dark: #047857;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-logo: 0 12px 30px -8px rgba(24, 64, 125, 0.45);
+  --shadow-logo-glow: 0 0 25px rgba(24, 64, 125, 0.35);
+}
+
+/* Base Adjustments */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--color-slate-900);
+  background-color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar in Logo Blue */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f5fc;
+}
+::-webkit-scrollbar-thumb {
+  background: #18407d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0c2346;
+}
+
+/* Logo Blue Glow Utilities */
+.glow-logo {
+  box-shadow: 0 0 25px rgba(24, 64, 125, 0.35);
+}
+
+.glow-logo-bright {
+  box-shadow: 0 0 30px rgba(43, 101, 190, 0.45);
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-logo {
+  background: linear-gradient(135deg, #07172e 0%, #0c2346 50%, #18407d 100%);
+}
+
+.bg-gradient-logo-card {
+  background: linear-gradient(135deg, #18407d 0%, #1f4f99 60%, #2b65be 100%);
+}
+
+.bg-gradient-logo-subtle {
+  background: linear-gradient(180deg, #f0f5fc 0%, #ffffff 100%);
+}
+
+.bg-hero-pattern {
+  background-color: #0c2346;
+  background-image: 
+    radial-gradient(at 15% 20%, rgba(24, 64, 125, 0.55) 0px, transparent 55%),
+    radial-gradient(at 85% 80%, rgba(43, 101, 190, 0.3) 0px, transparent 55%),
+    radial-gradient(at 50% 50%, rgba(7, 23, 46, 0.6) 0px, transparent 75%),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+}
+
+/* Custom Range Slider - Styled in Logo Blue */
+input[type="range"],
+input[type="range"].custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #cbdcf4;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #18407d;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 10px rgba(7, 23, 46, 0.4);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover,
+input[type="range"].custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #2b65be;
+}
+
+input[type="range"]::-moz-range-thumb,
+input[type="range"].custom-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #18407d;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 10px rgba(7, 23, 46, 0.4);
+  cursor: pointer;
+}
+
+/* Glass Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(24, 64, 125, 0.15);
+}
+
+.glass-panel-dark {
+  background: rgba(12, 35, 70, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Floating Action Bar */
+.floating-action-bar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Modal Overlay Animation */
+.modal-overlay {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-overlay:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Interactive Card Hover Effects */
+.card-hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px -8px rgba(24, 64, 125, 0.22);
+  border-color: #18407d;
+}
+
+/* Executive Dashboard Navigation Styling */
+#mainNavbar {
+  background: #0c2346 !important;
+  background: linear-gradient(180deg, #07172e 0%, #0c2346 100%) !important;
+  border-bottom: 1px solid rgba(24, 64, 125, 0.6) !important;
+  box-shadow: 0 4px 20px -2px rgba(7, 23, 46, 0.6), 0 0 15px rgba(24, 64, 125, 0.2) !important;
+  color: #ffffff !important;
+}
+
+#mainNavbar.scrolled {
+  background: rgba(7, 23, 46, 0.98) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 8px 30px -4px rgba(7, 23, 46, 0.8) !important;
+}
+
+#mobileNavDrawer > div {
+  background: #0c2346 !important;
+  color: #ffffff !important;
+  border-left: 1px solid rgba(24, 64, 125, 0.6) !important;
+}
+
+.nav-dash-link {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  white-space: nowrap;
+}
+.nav-dash-link:hover {
+  transform: translateY(-1px);
+}
+.nav-dash-link.active {
+  background: rgba(31, 79, 153, 0.95);
+  color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 2px 10px rgba(7, 23, 46, 0.5);
+}
+
+/* High-Visibility Logo Styling */
+.logo-display {
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.header-logo-img {
+  height: 52px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  display: block;
+}
+.header-logo-img:hover {
+  transform: scale(1.03);
+}
+
+.footer-logo-img {
+  height: 54px;
+  max-width: 260px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Primary Button in Logo Theme */
+.btn-logo-primary {
+  background: linear-gradient(135deg, #18407d 0%, #1f4f99 50%, #2b65be 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 8px 20px -4px rgba(24, 64, 125, 0.45);
+  transition: all 0.2s ease;
+}
+.btn-logo-primary:hover {
+  background: linear-gradient(135deg, #0c2346 0%, #18407d 50%, #1f4f99 100%);
+  box-shadow: 0 12px 25px -4px rgba(24, 64, 125, 0.6);
+  transform: translateY(-1px);
+}
+.btn-logo-primary:active {
+  transform: scale(0.98);
+}
+
+/* Secondary Button in Logo Theme */
+.btn-logo-secondary {
+  background: #f0f5fc;
+  color: #18407d;
+  border: 1px solid #bfd6f6;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-logo-secondary:hover {
+  background: #e1ecfa;
+  border-color: #18407d;
+  color: #0c2346;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
